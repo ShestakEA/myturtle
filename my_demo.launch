@@ -1,0 +1,8 @@
+<launch>
+
+	<node name="turtle1" pkg="turtlesim" type="turtlesim_node" output="screen" />
+	<node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen" />
+	<node name="turtle2" pkg="rosservice" type="rosservice" args="call --wait /spawn 1 1 1 my_turtle" output="screen" />
+	<node name="my_go_node" pkg="two_turtle" type="my_go_node" output="screen" />
+
+</launch>
